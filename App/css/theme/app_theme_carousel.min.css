@@ -1,0 +1,39 @@
+.carousel .item>img {
+	margin-top: 70px;
+		height: 535px;
+		 width: 100%;
+	object-fit: cover;
+}
+
+.second  .item>img {
+		height: 300px;
+	margin-top: 0px;
+}
+
+.carousel .left > i,
+.carousel .right > i {
+	  position: absolute;
+	     color: #ea5635;
+	  	   top: 50%;
+     transform: translateY(-50%);
+	}
+
+.carousel .left > i {
+	      left: 10px;
+	}
+
+.carousel .right > i {
+	      left: auto;
+	     right: 20px;
+}
+
+/*The following css classes (.carousel, etc), ids (#) and attributes (img, h1, etc) are applicable to mobile phones only*/
+
+@media screen and (max-width: 768px) {
+
+	.carousel .item>img {
+	margin-top: 50px;
+	    height: 350px;
+	object-fit: cover;
+  }
+}

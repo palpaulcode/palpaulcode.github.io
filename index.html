@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Brands</title>
+
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- The links bellow call bootstrap and custom styles of the application -->
+
+	<link rel="stylesheet" type="text/css" href="App/css/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="App/css/theme/app_theme.min.css">
+	<link rel="stylesheet" type="text/css" href="App/css/theme/app_theme_carousel.min.css">
+	<link rel="stylesheet" type="text/css" href="App/css/theme/app_theme_mobile.min.css">
+	<!-- The link bellow call font_awesome glyphicons -->
+
+	<link rel="stylesheet" href="App/css/font-awesome-4.7.0/css/font-awesome.min.css">
+
+	<script type="text/javascript">
+
+   //Created / Generates the captcha function    
+    function DrawCaptcha()
+    {
+        var a = Math.ceil(Math.random() * 10)+ '';
+        var b = Math.ceil(Math.random() * 10)+ '';       
+        var c = Math.ceil(Math.random() * 10)+ '';  
+        var d = Math.ceil(Math.random() * 10)+ '';  
+        var e = Math.ceil(Math.random() * 10)+ '';  
+        var f = Math.ceil(Math.random() * 10)+ '';  
+        var g = Math.ceil(Math.random() * 10)+ '';  
+        var code = a + ' ' + b + ' ' + ' ' + c + ' ' + d + ' ' + e + ' '+ f + ' ' + g;
+        document.getElementById("txtCaptcha").value = code
+    }
+
+    // Validate the Entered input aganist the generated security code function   
+    function ValidCaptcha(){
+        var str1 = removeSpaces(document.getElementById('txtCaptcha').value);
+        var str2 = removeSpaces(document.getElementById('txtInput').value);
+        if (str1 == str2) return true;        
+        return false;
+        
+    }
+
+    // Remove the spaces from the entered and generated code
+    function removeSpaces(string)
+    {
+        return string.split(' ').join('');
+    }
+    
+ 
+    </script>
+
+</head>
+<body onload="DrawCaptcha();">
+<nav> <!--Marks the beggining of the navigation section-->
+	<div class="navbar navbar-theme navbar-fixed-top bottom-border">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-4">	
+					<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse" style="margin-left: 20px;">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="col-xs-8 top_contact">
+					<i class="fa fa-envelope fa-1x" style="color: #ed481f;">&emsp;palpaul49@gmail.com</i>
+					&emsp;<i class="fa fa-phone fa-1x" style="color: #ed481f;">&emsp;0704395540&emsp;</i>
+				</div>
+			</div>	
+			<div class="collapse navbar-collapse navHeaderCollapse">
+				<ul class="nav navbar-nav navbar-left" style="margin-right: 10px; margin-left: 10px;">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="#home">About Us</a></li>
+					<li><a href="#what-we-do">Our Services</a></li>
+					<li><a href="#clients">Our Clients</a></li>
+					<li><a href="#contacts">Contact Us</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav> 
+<!--
+	*******************End of navigation*******************
+
+	###################Below, starts the carousel###################
+-->
+<carousel>
+<div class="container-fluid bottom-border">
+    
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+
+	   <div class="item active">
+			<img src="img/slide_2.png" alt="Slide 2" style="width:100%;"> 
+			<div class="carousel-caption">
+            	<h3>New York</h3>
+            	<p>We love the Big Apple!</p>
+          	</div>
+		</div>
+
+		<div class="item"> 
+			<img src="img/slide_3.png" alt="Slide_3" style="width:100%;"> 
+			<div class="carousel-caption">
+            	<h3>New York</h3>
+            	<p>We love the Big Apple!</p>
+          	</div>
+		</div>
+		
+		<div class="item"> 
+			<img src="img/slide_4.png" alt="Slide_4" style="width:100%;">
+			<div class="carousel-caption">
+            	<h3>New York</h3>
+            	<p>We love the Big Apple!</p>
+          	</div> 
+		</div>
+
+		<div class="item"> 
+			<img src="img/slide_5.png" alt="Slide_5" style="width:100%;"> 
+			<div class="carousel-caption">
+            	<h3>New York</h3>
+            	<p>We love the Big Apple!</p>
+          	</div>
+		</div>
+
+		<div class="item"> 
+				<img src="img/slide_4.png" alt="Slide_4"> 
+				<div class="carousel-caption">
+            	<h3>New York</h3>
+            	<p>We love the Big Apple!</p>
+          	</div>
+			</div>
+			<div class="item"> 
+				<img src="img/slide_5.png" alt="Slide_5"> 
+				<div class="carousel-caption">
+            	<h3>New York</h3>
+            	<p>We love the Big Apple!</p>
+          	</div>
+			</div>
+			<div class="item"> 
+				<img src="img/slide_6.png" alt="Slide_6"> 
+				<div class="carousel-caption">
+            	<h3>New York</h3>
+            	<p>We love the Big Apple!</p>
+          	</div>
+			</div>
+			<div class="item"> 
+				<img src="img/slide_7.png" alt="Slide_7"> 
+				<div class="carousel-caption">
+            	<h3>New York</h3>
+            	<p>We love the Big Apple!</p>
+          	</div>
+			</div>
+			<div class="item"> 
+				<img src="img/slide_8.png" alt="Slide_8"> 
+				<div class="carousel-caption">
+            	<h3>New York</h3>
+            	<p>We love the Big Apple!</p>
+          	</div>
+			</div>
+			<div class="item"> 
+				<img src="img/slide_9.png" alt="Slide_9"> 
+				<div class="carousel-caption">
+            	<h3>New York</h3>
+            	<p>We love the Big Apple!</p>
+          	</div>
+			</div>
+			<div class="item"> 
+				<img src="img/slide_10.png" alt="Slide_10"> 
+				<div class="carousel-caption">
+            	<h3>New York</h3>
+            	<p>We love the Big Apple!</p>
+          	</div>
+			</div>	
+			<div class="item"> 
+				<img src="img/slide_11.png" alt="Slide_11"> 
+				<div class="carousel-caption">
+            	<h3>New York</h3>
+            	<p>We love the Big Apple!</p>
+          	</div>
+			</div>
+
+      </div>
+
+      <!-- Left and right controls -->
+
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <i class="fa fa-angle-left fa-2x"></i></a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <i class="fa fa-angle-right fa-2x"></i></a>
+    </div>
+</div>
+</carousel> 
+<!--
+	*******************End of carousel*******************
+	###################Below, starts the main part of the page###################
+-->
+<main>
+	<!--
+		###################Below, starts the section for ABout Us###################
+	-->
+	<section id="home">
+		<div class="container-fluid bottom-border">
+			<div class="row navbar-theme">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<h1 class="text-center" style="text-decoration: underline green;">
+						<span style="color: #ea5635;">About</span>
+						<span style="color: green;">Us</span>
+					</h1>
+				</div>
+			</div>
+			<div class="container-fluid light-theme">
+				<div class="container clear">
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 hover">
+							<div class="text-center icon">
+								<i class="fa fa-bullseye fa-5x"></i>
+							</div>
+							<h2 class="text-center">
+								<span style="color: #ea5635;">The</span>
+								<span style="color: lime;">Mission</span>
+							</h2>
+							<h3 style="font-style: italic;"><sup><i class="fa fa-quote-left fa-2x" style="font-style: italic; color: #343132;"></i></sup>
+							Be the global go to solution provider for all client's branding activities.</h3>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 hover">
+							<div class="text-center icon">
+								<i class="fa fa-eye fa-5x"></i>
+							</div>
+							<h2 class="text-center">
+								<h2 class="text-center">
+								<span style="color: #ea5635;">The</span>
+								<span style="color: lime;">Vision</span>
+							 </h2>
+							<h3 style="font-style: italic; line-height: 50px;">
+								<sup><i class="fa fa-quote-left fa-2x" style="font-style: italic; color: #343132;"></i></sup>
+								Giving each business an image as good as the ideas behind it.
+								
+							</h3>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 hover">
+							<div class="text-center icon">
+								<i class="fa fa-file-text fa-5x"></i>
+							</div>
+							<h2 class="text-center">
+								<span style="color: #ea5635;">The</span>
+								<span style="color: lime;">core values</span>
+							 </h2>
+							<h3>We believe, trust and commit to:</h3>
+							<ul style="text-align: left;">
+								<li>Integrity</li>
+								<li>Honesty</li>
+								<li>Quality</li>
+								<li>Customer service</li>
+								<li>Creativity and innovativeness</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--
+		*******************End of the section for About us*******************
+		###################Below, starts the section for what we do###################
+	-->
+	<section id="what-we-do">
+		<div class="container-fluid">
+			<div class="row navbar-theme">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<h1 class="text-center" style="text-decoration: underline green;">
+						<span style="color: #ea5635;">Our</span>
+						<span style="color: green;">Services</span>
+					</h1>
+				</div>
+			</div>
+			<div class="container-fluid light-theme bottom-border">
+				<div class="foot">
+					<div class="container-fluid light-theme">
+					  <div class="row">
+					  	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+						  <!-- Indicators -->
+
+						  <ol class="carousel-indicators">
+						    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+						    <li data-target="#myCarousel" data-slide-to="1"></li>
+						    <li data-target="#myCarousel" data-slide-to="2"></li>
+						  </ol>
+
+						  <!-- Wrapper for slides -->
+
+						  <div class="carousel-inner second">
+						    <div class="item active">
+								  <img src="img/slide_2.png" alt="Slide 2" style="width:100%;"> 			
+								</div>
+								<div class="item"> 
+									<img src="img/slide_3.png" alt="Slide_3" style="width:100%;"> 		
+								</div>
+								<div class="item"> 
+									<img src="img/slide_4.png" alt="Slide_4" style="width:100%;">		 
+								</div>
+								<div class="item"> 
+									<img src="img/slide_5.png" alt="Slide_5" style="width:100%;"> 		
+								</div>
+							  <div class="item"> 
+									<img src="img/slide_4.png" alt="Slide_4"> 		
+								</div>
+								<div class="item"> 
+									<img src="img/slide_5.png" alt="Slide_5"> 		
+								</div>
+								<div class="item"> 
+									<img src="img/slide_6.png" alt="Slide_6"> 	
+								</div>
+								<div class="item"> 
+									<img src="img/slide_7.png" alt="Slide_7"> 		
+								</div>
+								<div class="item"> 
+									<img src="img/slide_8.png" alt="Slide_8"> 		
+								</div>
+								<div class="item"> 
+									<img src="img/slide_9.png" alt="Slide_9"> 		
+								</div>
+								<div class="item"> 
+									<img src="img/slide_10.png" alt="Slide_10"> 	
+								</div>	
+								<div class="item"> 
+									<img src="img/slide_11.png" alt="Slide_11"> 
+								</div>
+						  </div>
+
+						  <!-- Left and right controls -->
+
+						  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+						    <i class="fa fa-angle-left fa-2x"></i>
+						  </a>
+						  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+						    <i class="fa fa-angle-right fa-2x"></i>
+						  </a>
+						</div>
+					  </div>
+					  <div class="row">
+					    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+					      <div class="effect2">
+					        <div class="top-icon"><img class="img-responsive" src="img/outdoor.jpg"></div>
+					        <h3 class="text-center">
+					          <span style="color: #ea5635;">Outdoor</span>
+					          <span style="color: lime;">Adverstising</span>
+					        </h3>
+					        <p>Any advertising done outdoors that publicizes your business’s products and services. Such as signage, Roll up banners, Street banners, Snapper frames, Billboards, window graphics...</p>
+					      </div>
+					    </div>
+
+					    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+					      <div class="effect2">
+					      <div class="top-icon"><img class="img-responsive" src="img/corporate-identy.jpg"></div>
+					        <h3 class="text-center">
+					          <span style="color: #ea5635;">Corporate</span>
+					          <span style="color: lime;">Identity</span>
+					        </h3>
+					        <p>Logo is often the center of company branding, since it is an easily recognizable symbol setting the corporation uniqueness and runs through your business cards, Letterheads, office stationery...</p>
+					      </div>
+					    </div>
+					    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+					      <div class="effect2">
+					        <div class="top-icon"><img class="img-responsive" src="img/prom.jpg"></div>
+					        <h3 class="text-center">
+					          <span style="color: #ea5635;">Promotional</span>
+					          <span style="color: lime;">Items</span>
+					        </h3>
+					        <p>Sales collateral material, advertisements and smaller everyday products with business logo like Branded uniforms, bags, Mugs, pens, Diaries, Coasters, Mouse Pads, Desk Clocks...</p>
+					      </div>
+					    </div>
+					    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+					      <div class="effect2">
+					        <div class="top-icon"><img class="img-responsive" src="img/marketing-material.png"></div>
+					        <h3 class="text-center">
+					          <span style="color: #ea5635;">Marketing</span>
+					          <span style="color: lime;">Materials</span>
+					        </h3>
+					        <p>Virtual one's such as PDF/JPEG format shared on the internet or a handout with basic business information such as Flyers, Brochures, Company profiles, Documents Folders, Newsletters...</p>
+					      </div>
+					    </div>
+					    
+					    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+					      <div class="effect2">
+					        <div class="top-icon">
+					          <img class="img-responsive" src="img/products--branding.jpg">
+					        </div>
+					        <h3 class="text-center">
+					          <span style="color: #ea5635;">Branded</span>
+					          <span style="color: lime;">Apparel</span>
+					        </h3>
+					        <div class="row">
+					          <p>
+					            This include Clothing, especially outer garments that publicize your company using your Logo i.e. T-shirts, Poloshirts, Dustcoats, Overalls, Hoodies, Sweaters, scarves, headwear, caps...
+					          </p>
+					        </div>
+					      </div>
+					    </div>
+					        
+					  </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--
+		*******************End of the section for what-we-do*******************
+		###################Below, starts the section for clients###################
+	-->
+	<section id="clients">
+		<div class="container-fluid">
+			<div class="row navbar-theme">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<h1 class="text-center" style="text-decoration: underline green;">
+						<span style="color: #ea5635;">Join the</span>
+						<span style="color: green;">clients served</span>
+					</h1>
+				</div>
+			</div>
+			<div class="container-fluid lightest-theme bottom-border">
+				<div class="container foot">
+					<div class="row">
+						<div class="col-md-12 clients_img">	
+						    <div class="col-xl-4 col-md-4 col-sm-4 col-xs-12">
+						    	<img class="img-responsive" src="img/clients/kenya-orient-logo.png" style="width: 300px; height: 200px; object-fit: contain;"/>
+						    	<p style="text-align: center;">Kenya Orient Insurance Limited</p>
+						    </div>
+						    <div class="col-xl-4 col-md-4 col-sm-4 col-xs-12">
+						    	<img class="img-responsive" src="img/clients/logo.png" style="width: 300px; height: 200px; object-fit: contain;"/>
+						    	<p style="text-align: center;">Alpha Africa Asset Managers</p>
+						    </div>
+						    <div class="col-xl-4 col-md-4 col-sm-4 col-xs-12">
+						    	<img class="img-responsive" src="img/clients/icea_logo.png" style="width: 300px; height: 200px; object-fit: contain;"/>
+						    	<p style="text-align: center;">ICEA LION Group</p>
+						    </div>
+						    <div class="col-xl-4 col-md-4 col-sm-12 col-xs-12">
+						    	<img class="img-responsive" src="img/clients/mua_logo.png" style="width: 600px; height: 200px; object-fit: contain;"/>
+						    	<p style="text-align: center;">The Management University of Africa</p>
+						    </div>
+						    <div class="col-xl-4 col-md-4 col-sm-4 col-xs-12">
+						    	<img class="img-responsive" src="img/clients/governors.jpeg" style="width: 300px; height: 200px; object-fit: contain;"/>
+						    	<p style="text-align: center;">Council of Governors</p>
+						    </div>
+						    <div class="col-xl-4 col-md-4 col-sm-4 col-xs-12">
+						    	<img class="img-responsive" src="img/clients/im-logo.png" style="width: 300px; height: 200px; object-fit: contain;"/>
+						    	<p style="text-align: center;">I&M Bank Limited</p>
+						    </div>
+						    <div class="col-xl-2 col-md-2 col-sm-4 col-xs-12">
+						    	<img class="img-responsive" src="img/clients/index.png" style="width: 300px; height: 200px; object-fit: contain;"/>
+						    	<p style="text-align: center;">OLX</p>
+						    </div>
+							<div class="col-xl-3 col-md-3 col-sm-4 col-xs-12">
+								<img class="img-responsive" src="img/clients/Logo-Black.png" style="width: 400px; height: 200px; object-fit: contain;"/>
+								<p style="text-align: center;">The designers studio</p>
+							</div>
+						    
+						    <div class="col-xl-3 col-md-3 col-sm-4 col-xs-12">
+						    	<img class="img-responsive" src="img/clients/restaurant.png" style="width: 400px; height: 200px; object-fit: contain;"/>
+						    	<p style="text-align: center;">SEVEN to EIGHT Restaurant</p>
+						    </div>
+						    <div class="col-xl-3 col-md-3 col-sm-4 col-xs-12">
+						    	<img class="img-responsive" src="img/clients/kajiado.jpg" style="width: 300px; height: 200px; object-fit: contain;"/>
+						    	<p style="text-align: center;">County Government of Kajiado</p>
+						    </div>
+						    
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+	</section>
+	<!--
+		*******************End of the section for clients*******************
+		###################Below, starts the section for why choose us###################
+	-->
+	<section id="why-choose-us">
+		<div class="container-fluid">
+			<div class="row navbar-theme">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<h1 class="text-center" style="text-decoration: underline green;">
+						<span style="color: #ea5635;">Why</span>
+						<span style="color: green;">choose Brand</span>
+					</h1>
+				</div>
+			</div>
+			<div class="container-fluid light-theme bottom-border">
+				<div class="foot">
+					<carousel id="why-brand">
+						<div id="myCarousel" class="carousel slide" data-ride="carousel">
+						      <!-- Wrapper for slides -->
+						  <div class="carousel-inner">
+						    <div class="item active">
+						          <div class="container-fluid">
+						            <div class="row">
+						              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 spacing" style="background-image: url(img/who-we-are.jpg); height: 350px;">
+						        
+						              </div>  
+						              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 spacing">
+						                  <i class="fa fa-users fa-4x"></i>
+						                <h1 class="text-center">
+						                  <span style="color: #ea5635;">Who</span>
+						                  <span style="color: lime;">we are</span>
+						                </h1>
+						                  <p>Brand focus as an outdoor company is in strategic advertising, development, printing, promotions, installation and maintenance of all types of indoor & outdoor billboards, signage and promotional items. Our fundamental objective is to deliver a highly visible and visually attractive image</p>						             
+						              </div>						              
+						            </div>
+						          </div>
+						    </div>
+						    <!--
+								End of the first item - who we are
+
+								Start of the second item - why choose us
+						    -->  
+						    <div class="item"> 
+						          <div class="container-fluid">
+						              <div class="row">
+						                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 spacing" style="background-color: white; height: 350px;">
+						                  <img class="img-responsive" src="img/why-choose-us.png" style="padding: 30px;">
+						                </div>
+						                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 spacing">
+						                    <i class="fa fa-comments fa-4x"></i>
+						                    <h1 class="text-center">
+						                      <span style="color: #ea5635;">Why</span>
+						                      <span style="color: lime;">choose us</span>
+						                    </h1>
+						                    <p>It does not matter who your target audience is. What matters most is to be connected and communicate with them. With Brand Link, your advertisement would definitely create a big impact on the target audience. Brand offers the best solution for integrated outdoor advertisementertising.
+						                    </p>						                   
+						                </div>
+						              </div>
+						        </div> 
+						    </div>
+						    <!--
+								End of the second item - why choose us
+
+								A third item - can be added imediately before the </div> closing tag below.
+						    --> 
+						  </div> <!-- End of the inner wrapper for slides-->
+
+					      <!-- Left and right controls -->
+
+					    <!--  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+					        <i class="fa fa-angle-left fa-2x"></i></a>
+					      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+					        <i class="fa fa-angle-right fa-2x"></i></a>
+						</div> -->
+					</carousel>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+<!--
+	*******************End of the section for choose us*******************
+	*******************End of the main part of the page*******************
+
+	###################Below, starts the footer###################
+-->
+<footer id="contacts">
+	<div class="container-fluid">
+		<div class="row navbar-theme">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<h1 class="text-center" style="text-decoration: underline green;">
+					<span style="color: #ea5635;">Talk</span>
+					<span style="color: green;">to us</span>
+				</h1>
+			</div>
+		</div>
+		<div class="container-fluid light-theme bottom-border">
+			<div class="container foot">
+				<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 spacing">
+							<h2 class="text-center" style="padding-bottom: 0px;">We love to hear from you, we are here listening.</h2>
+							<form class="block">
+								<div>
+									<i class="fa fa-user fa-1x"></i><input type="text" name="" placeholder="Your Name">
+								</div>
+								<div>
+									<i class="fa fa-at fa-1x"></i><input type="email" name="" placeholder="youremail@example.com">
+								</div>
+								<div>
+									<i class="fa fa-check-circle fa-1x"></i>
+									<select type="text" name="" placeholder="select one" style="width: 87%;">
+										<option>Branding</option>
+										<option>Personal</option>
+										<option>Other</option>
+									</select>
+								</div>
+								<div>
+									<i class="fa fa-pencil fa-1x" style="vertical-align: top; padding-top: 10px;"></i><textarea type="textarea" name="" rows="5" placeholder="Your message"></textarea>
+								</div>
+								<div class="submit">
+									<i class="fa fa-key fa-1x"></i><input type="text" id="txtCaptcha" style="text-align:center; font-weight:italic; font-family:Modern; width: 68%;"/><button style="width: 20%;" type="button" id="btnrefresh" value="Refresh" onclick="DrawCaptcha();">Refresh</button>
+								</div>
+								<div class="submit">
+									<i class="fa fa-unlock fa-1x"></i><input style="width: 68%; text-align: center;" type="text" name="" placeholder="Captcha code"><button style="width: 20%;" onclick="ValidCaptcha();">Submit</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+		 <div class="container-fluid">
+			<div class="row">
+				<!--
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> 
+					Uncommenting the col-* prevents the map from fully occupying the width 
+				-->
+				<div id="map"></div>
+				<script>
+					function myMap() {
+					var mapOptions = {
+					    center: new google.maps.LatLng(-1.2895921, 36.8275778),
+					    zoom: 18,
+					    mapTypeId: google.maps.MapTypeId.HYBRID
+					}
+					var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+					}
+				</script>
+				<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBP2vh03fPtCYZjeA2BD78o7Fs_vuhrugY&callback=myMap">
+				</script>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="row navbar-theme">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<p class="text-center" style="margin-top:20px; margin-bottom:20px; font-size: 12px;">
+					Copyright &copy; 2019 @palpaul. All Rights Reserved.
+				</p>
+			</div>
+		</div>
+	</div>
+</footer> 
+	<!--
+		
+		*******************End of the footer marking end of the landing page.*******************
+
+		###################Javascript files links provided below to help faster loading of the page.###################
+		Adding javascript files at the end allows the html content to load and display faster without waiting for the javascript files to load and display at the same time.
+	
+	-->
+	<script src="App/js/jquery.js"></script>
+	<script src="App/js/bootstrap.min.js"></script>
+
+<!-- The end -->
+
+</body>
+</html>
